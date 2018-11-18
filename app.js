@@ -20,6 +20,7 @@ function draw() {
   background(0);
   if (frameCount < 1000) {
     welcome();
+    console.log(frameCount)
   }
   if (frameCount % speed === 0) {
     snake.moves();
