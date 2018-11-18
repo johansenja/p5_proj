@@ -8,7 +8,7 @@ var font,
     fontsize = 32;
 
 function preload() {
-  // font = loadFont('open sans')
+  font = loadFont('PressStart2P-Regular.ttf')
 }
 
 function setup() {
@@ -93,7 +93,7 @@ function Snake() {
 
   this.dies = () => {
     fill(255);
-    textFont('open sans');
+    textFont(font);
     textAlign(CENTER);
     textSize(2 * fontsize);
     text(`Game Over! Score: ${score}`, width / 2, height / 2);
@@ -165,7 +165,7 @@ function keyPressed() {
 
 const updateScore = () => {
   fill(255);
-  textFont('open sans');
+  textFont(font);
   textAlign(RIGHT);
   textSize(fontsize);
   text(`Score: ${score}`, width - 100, 100);
