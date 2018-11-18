@@ -18,7 +18,7 @@ function setup() {
 
 function draw() {
   background(0);
-  if (frameCount < 500) {
+  if (frameCount < 250) {
     welcome();
   }
   if (frameCount % speed === 0) {
@@ -175,7 +175,7 @@ const updateScore = () => {
 };
 
 const welcome = () => {
-  this.message = "w a s d to move\nGame over if the snake\nhits itself or the edges"
+  this.message = "w a s d to move, refresh to replay\nGame over if the snake\nhits itself or the edges\nEnjoy!"
   textFont(font);
   textAlign(CENTER);
   textSize(fontsize);
