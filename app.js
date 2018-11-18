@@ -18,7 +18,7 @@ function setup() {
 
 function draw() {
   background(0);
-  if (frameCount < 250) {
+  if (frameCount < 300) {
     welcome();
   }
   if (frameCount % speed === 0) {
