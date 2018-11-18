@@ -18,6 +18,7 @@ function setup() {
 
 function draw() {
   background(0);
+  welcome();
   if (frameCount % speed === 0) {
     snake.moves();
   }
@@ -146,6 +147,7 @@ function Food() {
 }
 
 function keyPressed() {
+  welcome.message = ''
   if (key == 'w' && snake.direction != 'down') {
     snake.direction = 'up'
   }
@@ -172,9 +174,9 @@ const updateScore = () => {
 };
 
 const welcome = () => {
+  this.message = "w a s d to move\nGame over if the snake\nhits itself or the edges"
   textFont(font);
   textAlign(CENTER);
   textSize(fontsize);
-  text("w a s d to move\nGame over if the snake\nhits itself or the edges", width / 2, height / 2);
+  text(this.message, width / 2, height / 2);
 }
-
