@@ -37,13 +37,6 @@ function draw() {
     food.push(new Food());
   }
 
-  if (frameCount < 3000) {
-    textFont(font);
-    textAlign(CENTER);
-    textSize(fontsize);
-    text("w a s d to move\nGame over if the snake hits itself or the edges", width / 2, height / 2);
-  }
-
   food.forEach((piece, index) => {
     piece.show();
     if (piece.isEaten()) {
@@ -177,3 +170,11 @@ const updateScore = () => {
   textSize(fontsize);
   text(`Score: ${score}`, width - 100, 100);
 };
+
+const welcome = () => {
+  textFont(font);
+  textAlign(CENTER);
+  textSize(fontsize);
+  text("w a s d to move\nGame over if the snake\nhits itself or the edges", width / 2, height / 2);
+}
+
