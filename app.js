@@ -18,7 +18,9 @@ function setup() {
 
 function draw() {
   background(0);
-  welcome();
+  if (frameCount < 1000) {
+    welcome();
+  }
   if (frameCount % speed === 0) {
     snake.moves();
   }
@@ -149,22 +151,18 @@ function Food() {
 function keyPressed() {
   if (key == 'w' && snake.direction != 'down') {
     snake.direction = 'up'
-    welcome.message = ''
   }
 
   if (key == 'a' && snake.direction != 'right') {
     snake.direction = 'left'
-    welcome.message = ''
   }
 
   if (key == 'd' && snake.direction != 'left') {
     snake.direction = 'right'
-    welcome.message = ''
   }
 
   if (key == 's' && snake.direction != 'up') {
     snake.direction = 'down'
-    welcome.message = ''
   }
 }
 
